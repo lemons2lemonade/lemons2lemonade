@@ -92,6 +92,26 @@
   color: white;
   text-shadow: 0 1px 2px rgba(0,0,0,0.7);
 }
+#hero {
+  /* base image + overlay in one shot */
+  background-image:
+    /* darken the whole image by 60% */
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    /* your photo */
+    url('IMG_8361.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* make sure the hero container can stack text above the overlay */
+  position: relative;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+
+  /* optional padding to give your text breathing room */
+  padding: 4rem 1rem;
+  text-align: center;
+}
 
 #hero::before {
   content: '';
