@@ -40,7 +40,9 @@
     *{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',sans-serif;color:var(--text);}body{background:var(--bg);line-height:1.6;scroll-behavior:smooth;}
     header{background:white;box-shadow:0 2px 8px rgba(0,0,0,.06);position:sticky;top:0;z-index:10;}
     nav{max-width:1000px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:1rem;}
-    nav a.logo{font-weight:800;font-size:1.25rem;text-decoration:none;color:var(--primary);}#hamburger{display:none;font-size:1.5rem;background:none;border:none;color:var(--primary);cursor:pointer;}
+    nav a.logo{font-weight:800;font-size:1.25rem;text-decoration:none;color:var(--primary);display:flex;align-items:center;gap:0.5rem;}
+    .avatar{width:32px;height:32px;border-radius:50%;object-fit:cover;border:2px solid var(--primary);}
+    #hamburger{display:none;font-size:1.5rem;background:none;border:none;color:var(--primary);cursor:pointer;}
     ul.menu{list-style:none;display:flex;gap:1rem;}ul.menu a{font-weight:600;text-decoration:none;position:relative;}ul.menu a::after{content:"";position:absolute;width:0;height:2px;background:var(--primary);left:0;bottom:-4px;transition:width .3s;}ul.menu a:hover::after{width:100%;}
     .theme-toggle{cursor:pointer;border:none;background:none;font-size:1.25rem;color:var(--primary);margin-left:.5rem;}
 
@@ -118,13 +120,21 @@
     z-index: 1;
   }
   
+  #publications img.poster-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
   
   </style>
 </head>
 <body>
   <header>
     <nav>
-      <a class="logo" href="#hero">Matt Wallace.</a>
+      <a class="logo" href="#hero"><img src="avatar.jpg" alt="Matt Wallace" class="avatar">Matt Wallace.</a>
       <button id="hamburger" aria-label="open menu">☰</button>
       <ul class="menu">
         <li><a href="#projects">Projects</a></li>
@@ -163,6 +173,8 @@
       <ul>
         <li><strong>Matthew Wallace</strong>, Parvesh Samayamanthula. Deceiving Privacy Policy Classifiers with Adversarial Examples, USENIX 2018</li>
       </ul>
+      
+      <img src="poster_picture.jpeg" alt="Poster presentation" class="poster-image">
     </section>
 
     <section id="blog" class="reveal">
