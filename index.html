@@ -79,52 +79,48 @@
   }
 
   #hero {
-  /* fallback if image isn’t found yet */
-  background-color: var(--accent);
+    /* base image with overlay */
+    background-image:
+      /* stronger darkening overlay (70% opacity black) */
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      /* your photo */
+      url('IMG_8361.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    /* improved text styling */
+    color: white;
+    text-shadow: 0 2px 8px rgba(0,0,0,1);
+    padding: 4rem 1rem;
+    text-align: center;
+  }
 
-  /* then try to load your image */
-  background-image: url('IMG_8361.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* Add a semi-transparent background to text elements */
+  #hero h1, #hero p {
+    background-color: rgba(0,0,0,0.4);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
+    max-width: 80%;
+    margin: 0 auto;
+    color: #ffffff; /* Pure white text */
+    font-weight: 600; /* Slightly bolder text */
+  }
 
-  /* text styling */
-  color: white;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.7);
-}
-#hero {
-  /* base image + overlay in one shot */
-  background-image:
-    /* darken the whole image by 60% */
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    /* your photo */
-    url('IMG_8361.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  #hero h1 {
+    text-shadow: 0 2px 10px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.7); /* Stronger shadow */
+  }
 
-  /* make sure the hero container can stack text above the overlay */
-  position: relative;
-  color: white;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+  #hero p {
+    text-shadow: 0 1px 5px rgba(0,0,0,1); /* Subtle shadow for paragraph */
+  }
 
-  /* optional padding to give your text breathing room */
-  padding: 4rem 1rem;
-  text-align: center;
-}
-
-#hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.4); /* semi-transparent overlay */
-  z-index: 0;
-}
-
-#hero > * {
-  position: relative;
-  z-index: 1; /* keep your text above the overlay */
-}
+  #hero > * {
+    position: relative;
+    z-index: 1;
+  }
   
   
   </style>
@@ -181,7 +177,7 @@
 
     <section id="about" class="reveal">
       <h2>About Me</h2>
-      <p>I’m an Applied ML & Software Engineer with an M.S. in ECE (UW‑Madison) and B.S. in CS (UVA) based in Baltimore. I enjoy building resilient systems that leverage specialized data representations and hardware-aware optimizations to solve otherwise intractable problems.</p>
+      <p>I'm an Applied ML & Software Engineer with an M.S. in ECE (UW‑Madison) and B.S. in CS (UVA) based in Baltimore. I enjoy building resilient systems that leverage specialized data representations and hardware-aware optimizations to solve otherwise intractable problems.</p>
     </section>
 
     <section id="contact" class="reveal">
