@@ -235,7 +235,7 @@
     // reveal
     const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ob.unobserve(e.target);}}),{threshold:.15});document.querySelectorAll('.reveal').forEach(el=>ob.observe(el));
     // typing
-    const words=["security-minded systems","data pipelines","ETL pipelines", "FPGA-accelerated data structures", "Dimensionality-reduction transforms (PCA, t-SNE, UMAP)", "Computer-vision inference workflows", "NLP text-processing stacks", "Model fine-tuning"],h=document.querySelector('#hero h1');let i=0,j=0,erase=false;setInterval(()=>{h.textContent="Building "+words[i].slice(0,j)+(!erase&&j<words[i].length?"|":"");if(!erase&&j===words[i].length){erase=true;setTimeout(()=>{},800);}else if(!erase){j++;}else if(erase&&j>0){j--;}else{erase=false;i=(i+1)%words.length;}},90);
+    const words=["security-minded systems","data pipelines","ETL pipelines", "FPGA-accelerated data structures", "dimensionality-reduction transforms (PCA, t-SNE, UMAP)", "computer-vision inference workflows", "NLP text-processing stacks", "model fine-tuning", "CUDA-accelerated workflows"],h=document.querySelector('#hero h1');let i=0,j=0,erase=false;setInterval(()=>{h.textContent="Building "+words[i].slice(0,j)+(!erase&&j<words[i].length?"|":"");if(!erase&&j===words[i].length){erase=true;setTimeout(()=>{},800);}else if(!erase){j++;}else if(erase&&j>0){j--;}else{erase=false;i=(i+1)%words.length;}},90);
     
     // Anti-scrape contact links
     function generateContactLinks() {
