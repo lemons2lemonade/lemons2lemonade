@@ -312,22 +312,7 @@
       } catch (error) {
         console.error("Error generating contact links:", error);
         
-        // Fallback: Create basic links if JavaScript fails
-        createFallbackLinks();
       }
-    }
-    
-    function createFallbackLinks() {
-      const contactDiv = document.getElementById('contact-links');
-      if (!contactDiv) return;
-      
-      contactDiv.innerHTML = `
-        <a href="mailto:mhwallace@wisc.edu" aria-label="email"><i class="fas fa-envelope"></i></a>
-        <a href="https://github.com/lemons2lemonade" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/matthew-wallace-699a38125/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://orcid.org/0000-0002-9796-7247" target="_blank" aria-label="ORCID"><i class="fas fa-id-badge"></i></a>
-        <a href="https://scholar.google.com/citations?user=dLvzx8MAAAAJ&hl=en" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-      `;
     }
     
     // Initialize contact links - run immediately and also on DOMContentLoaded
