@@ -59,6 +59,24 @@
 
     footer{background:white;margin-top:4rem;padding:2rem 1rem;text-align:center;font-size:.9rem;color:#64748b;border-top:1px solid var(--accent);}  .socials{margin:1rem 0;display:flex;justify-content:center;gap:1rem;} .socials a{color:var(--primary);font-size:1.5rem;}
 
+    /* Make contact links larger */
+    #contact-links a {
+      font-size: 2.25rem;
+      margin: 0 0.8rem;
+      transition: transform 0.2s, color 0.2s;
+    }
+    
+    #contact-links a:hover {
+      transform: translateY(-3px);
+      color: #4a8cff;
+    }
+    
+    #contact-links svg {
+      width: 2.25rem;
+      height: 2.25rem;
+      vertical-align: middle;
+    }
+
     /* reveal scroll */ .reveal{opacity:0;transform:translateY(30px);transition:all .6s ease;} .reveal.visible{opacity:1;transform:none;}
     /* mobile menu */ @media(max-width:640px){ul.menu{display:none;flex-direction:column;position:absolute;top:64px;right:1rem;background:white;padding:1rem;border-radius:.75rem;box-shadow:0 2px 8px rgba(0,0,0,.08);} ul.menu.show{display:flex;} #hamburger{display:block;}}
   
@@ -148,9 +166,6 @@
 
   <main>
     <section id="hero" class="reveal">
-      <div style="width:120px;height:120px;margin:auto;background:rgba(0,0,0,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;" aria-label="coding icon">
-        <i class="fas fa-laptop-code" style="font-size:60px;color:white;"></i>
-      </div>
       <h1>Building intelligent systems &nbsp;</h1>
       <p>Applied ML & Software Engineer | Speech/Language Processing | Secure Systems Design </p>
 <!--       <a class="btn" href="assets/resume_v2025-04.pdf" target="_blank">Download Résumé (PDF)</a> -->
